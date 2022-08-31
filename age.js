@@ -1,6 +1,9 @@
-const currentAge = 20;
-console.log(`You are ${currentAge} years old.`)
-console.log(`In 10 years, you will be ${currentAge + 10} years old.`)
-console.log(`In 20 years, you will be ${currentAge + 20} years old.`)
-console.log(`In 30 years, you will be ${currentAge + 30} years old.`)
-console.log(`In 40 years, you will be ${currentAge + 40} years old.`)
+
+let readlineSync = require('readline-sync');
+let age = readlineSync.question('How old are you? ');
+age = Number(age);
+console.log(`You are ${age} years old.`);
+
+for (let future = 10; future <= 40; future += 10) {
+  console.log(`In ${future} years, you will be ${age + future} years old.`)
+}

@@ -1,0 +1,11 @@
+function factorial(n) {
+  let answer = 1;
+  for(let i = 1; i <= n; i++) {
+      answer *= i
+  }
+  return answer
+}
+let rlSync = require('readline-sync');
+let arguement = Number(rlSync.question('What factorial do you want to find?'))
+
+console.log(factorial(arguement));
